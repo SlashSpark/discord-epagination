@@ -172,7 +172,7 @@ export const createSlider = async (options: SliderOptions) => {
     const id = interaction.customId as ButtonNames;
 
     if (id === "back") {
-      //interaction.reply({ content: replyMessages.back, ephemeral: true });
+      interaction.reply({ content: replyMessages.back, ephemeral: true });
       if (currentPage === 1) {
         currentPage = embeds.length;
         editEmbed(currentPage - 1);
@@ -181,7 +181,7 @@ export const createSlider = async (options: SliderOptions) => {
       currentPage--;
     }
     if (id === "foward") {
-     // interaction.reply({ content: replyMessages.foward, ephemeral: true });
+     interaction.reply({ content: replyMessages.foward, ephemeral: true });
       if (currentPage === embeds.length) {
         currentPage = 1;
         editEmbed(currentPage - 1);
@@ -190,11 +190,11 @@ export const createSlider = async (options: SliderOptions) => {
       currentPage++;
     }
     if (id === "first") {
-     // interaction.reply({ content: replyMessages.first, ephemeral: true });
+     interaction.reply({ content: replyMessages.first, ephemeral: true });
       currentPage = 1;
     }
     if (id === "last") {
-      //interaction.reply({ content: replyMessages.last, ephemeral: true });
+      interaction.reply({ content: replyMessages.last, ephemeral: true });
       currentPage = embeds.length;
     }
     if (id === "delete") {
